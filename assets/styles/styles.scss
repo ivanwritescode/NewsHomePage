@@ -49,11 +49,11 @@ a {
     margin: 0 auto;
     display: grid;
     gap: 1.5em;
-    grid-template-columns: 1fr 1fr 1fr 1.5fr;
+    grid-template-columns: 1fr 1fr 1fr;
     grid-template-areas:
-        "s_header s_header s_header s_header"
-        "s_main s_main s_main s_newsaside"
-        "s_newsarticles s_newsarticles s_newsarticles s_newsarticles";
+        "s_header s_header s_header"
+        "s_main s_main s_newsaside"
+        "s_newsarticles s_newsarticles s_newsarticles";
 }
 
 .site-header {
@@ -88,20 +88,26 @@ a {
 
     .page-headline {
         display: grid;
-        gap: 2em;
+        gap: 1.5em;
         grid-template-areas:
-            "h_image h_image h_image h_image"
-            "h_text h_text h_content h_content";
+            "h_image h_image"
+            "h_text h_content ";
+        grid-template-columns: 1fr 1fr;
 
         .headline-image {
             grid-area: h_image;
             max-width: 100%;
         }
 
+        .headline-text,
+        .headline-content {
+            margin-top: .5rem;
+        }
+
         .headline-text {
             grid-area: h_text;
             font-family: 'Inter-ExtraBold';
-            font-size: 3rem;
+            font-size: 3.5rem;
         }
 
         .headline-content {
@@ -176,7 +182,7 @@ a {
     grid-area: s_newsarticles;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    gap: 2em;
+    gap: 1.5em;
     margin-top: 2em;
 
     article {
@@ -229,4 +235,8 @@ a {
             text-decoration: underline;
         }
     }
+}
+
+@media (min-width: 600px) {
+    
 }
