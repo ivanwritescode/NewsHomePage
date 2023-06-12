@@ -7,6 +7,32 @@
     <title>NewsHomePage</title>
     <link rel="stylesheet" href="assets/styles/reset.css">
     <link rel="stylesheet" href="assets/styles/styles.css">
+
+    <style>
+        @font-face {
+            font-family: 'Inter-Regular';
+            font-display: swap;
+            font-weight: 400 700 800;
+            src: url(./assets/fonts/static/Inter-Regular.ttf)
+                format('truetype')
+        }
+
+        @font-face {
+            font-family: 'Inter-Bold';
+            font-display: swap;
+            font-weight: 400 700 800;
+            src: url(./assets/fonts/static/Inter-Bold.ttf)
+                format('truetype')
+        }
+
+        @font-face {
+            font-family: 'Inter-ExtraBold';
+            font-display: swap;
+            font-weight: 400 700 800;
+            src: url(./assets/fonts/static/Inter-ExtraBold.ttf)
+                format('truetype')
+        }
+    </style>
 </head>
 
 <body>
@@ -35,7 +61,11 @@
         </header>
         <main class='main-content'>
             <article class='page-headline'>
-                <img class='headline-image' src='assets/images/image-web-3-desktop.jpg' alt='headline image' />
+                <picture class="headline-image">
+                    <source media="(max-width: 799px)" srcset="./assets/images/image-web-3-mobile.jpg" />
+                    <source media="(min-width: 800px)" srcset="./assets/images/image-web-3-desktop.jpg" />
+                    <img src="./assets/images/image-web-3-mobile.jpg" alt="Web 3 image" />
+                </picture>
                 <h1 class='headline-text'>The Bright Future of Web 3.0?</h1>
                 <div class='headline-content'>
                     <p>
