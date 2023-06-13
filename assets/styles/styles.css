@@ -1,6 +1,6 @@
 body {
   font-family: "Inter-Regular";
-  margin-top: 4em !important;
+  margin: 4em 0;
 }
 
 a {
@@ -38,6 +38,11 @@ a {
 }
 .site-header .site-nav .nav-list .nav-list-item a:hover {
   color: hsl(5, 85%, 63%);
+}
+.site-header .hamburger-menu {
+  display: none;
+  background: inherit;
+  border: 0;
 }
 
 .main-content {
@@ -176,6 +181,15 @@ a {
 }
 
 @media (max-width: 645px) {
+  body {
+    margin-top: 2em;
+  }
+  .site-nav {
+    display: none;
+  }
+  .site-header .hamburger-menu {
+    display: inline-block;
+  }
   .container {
     margin: 0;
     margin: 0 auto;

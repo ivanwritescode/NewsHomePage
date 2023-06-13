@@ -29,7 +29,7 @@ $mobile-font-size-attribution: .8rem;
 
 body {
     font-family: 'Inter-Regular';
-    margin-top: 4em !important;
+    margin: 4em 0;
 }
 
 a {
@@ -73,6 +73,12 @@ a {
                 }
             }
         }
+    }
+
+    .hamburger-menu {
+        display: none;
+        background: inherit;
+        border: 0;
     }
 }
 
@@ -237,6 +243,18 @@ a {
 }
 
 @media (max-width: 645px) {
+    body {
+        margin-top: 2em;
+    }
+
+    .site-nav {
+        display: none;
+    }
+
+    .site-header .hamburger-menu {
+        display: inline-block;
+    }
+
     .container {
         margin: 0;
         margin: 0 auto;
