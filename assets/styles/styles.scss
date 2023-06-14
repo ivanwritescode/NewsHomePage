@@ -19,13 +19,11 @@ $desktop-font-size-attribution: .8rem;
 
 // Mobile font sizes
 $mobile-font-size-paragraph: 0.9rem;
-
 $mobile-font-size-headlinetext: 3rem;
-
 $mobile-font-size-headline-cta: .7rem;
 $mobile-font-size-aside-header: 2rem;
 $mobile-font-size-news-aside-h3: 1.2em;
-$mobile-font-size-attribution: .8rem;
+$mobile-font-size-attribution: 0.7rem;
 
 body {
     font-family: 'Inter-Regular';
@@ -229,7 +227,7 @@ a {
     left: 0;
     width: 100%;
     background-color: #f0f0f0;
-    padding: 1em;
+    padding: 1em 0;
     text-align: center;
     font-size: $desktop-font-size-attribution;
 
@@ -277,10 +275,36 @@ a {
             'h_image'
             'h_text'
             'h_content';
+        gap: 1.2em;
     }
 
+    .main-content .page-headline {
+        .headline-text {
+            font-size: $mobile-font-size-headlinetext;
+            margin: 0;
+        }
 
-    .main-content .page-headline .headline-text {
-        font-size: $mobile-font-size-headlinetext;
+        .headline-content p {
+            margin-top: 0;
+        }
+    }
+
+    .news-aside {
+        .aside-header {
+            margin: 0;
+        }
+
+        article {
+            padding-top: 0.5em;
+
+            &:not(:last-child) {
+                padding-bottom: 0.5em;
+            }
+        }
+    } 
+
+    .attribution {
+        font-size: $mobile-font-size-attribution;
+        padding: 0.6em 0;
     }
 }
